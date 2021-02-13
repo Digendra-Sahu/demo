@@ -253,18 +253,17 @@ def super_prime(n):
         k += 1
         l //= 10
     while n > 0:
-        rem = n % pow(10, k-1)
-        k -= 1
+        rem = n % 10
         n //= 10
         if not isprime(rem):
+            k -= 1
             continue
         else:
             if isprime(k):
                 lst.append(rem)
+                k -= 1
 
     return lst
-
-print(super_prime(12345))
 
 #maximum nos by deleting a single digit //
 def max_del(num):
