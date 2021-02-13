@@ -77,7 +77,6 @@ def malf_time(tim_str):
     for i in lst2:
         s += str(i) + ":"
     return s
-    
 
 
 #malformed date string //
@@ -133,10 +132,7 @@ def rgb_to_hex(val):
                     s+= str(rem)
                 i //= 16
     return s
-
-print(rgb_to_hex((12,234,33)))
     
-
 #accumulated strings //
 def accum_str(st):
     s = ""
@@ -150,10 +146,8 @@ def accum_str(st):
 #mexican wave //
 def mexican(st):
     lst = []
-    for i, val in enumerate(st[:]):
-        up=st[i].upper()
-        c=st[:i] + up + st[i+1:]
+    for i in range(len(st)):
+        c=st[:i] + st[i].upper() + st[i+1:]
         lst.append(c)
     return lst
         
-
