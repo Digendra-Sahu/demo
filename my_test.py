@@ -157,7 +157,8 @@ def test34_func():
     assert isogram("python") == True
 
 def test35_func():
-    assert iptoint
+    assert iptoint("192.168.1.251") == 1921681251
+    assert iptoint(192112134251) == "192.112.134.251."
 
 def test36_func():
     assert word_frequency("a cat a bat and a rat") == {'a': 3, 'cat': 1, 'bat': 1, 'and': 1, 'rat': 1}

@@ -28,7 +28,7 @@ def iptoint(ip):
                  n //= 1000
          for i in lst:
              s += str(i) + "."
-         return s
+         return s[::-1]
 
 #frequency of message //
 def word_frequency(message):
