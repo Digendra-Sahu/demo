@@ -148,7 +148,7 @@ def accum_str(st):
 def mexican(st):
     lst = []
     for i in range(len(st)):
-        c=st[:i] + st[i].upper() + st[i+1:]
+        c=st[:i].lower() + st[i].upper() + st[i+1:].lower()
         lst.append(c)
     return lst
         

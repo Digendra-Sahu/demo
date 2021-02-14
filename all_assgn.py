@@ -1,6 +1,6 @@
-import assign_1pyth, assign_2pyth, assign_3pyth
+from assign_1pyth import *
+from assign_2pyth import *
+from assign_3pyth import *
 
-print(assign_3pyth.rgb_to_hex((255,121,145)))
-
-
-
+print(word_frequency("a cat a bat and a rat"))
+print(word_frequency("can i come in i am tired ?"))

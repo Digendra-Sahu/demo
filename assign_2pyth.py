@@ -26,14 +26,14 @@ def missing_list(lst1, lst2):
 #elements smaller than mean //
 def ele_small_mean(lst):
     sum = 0
-    lst = []
+    lst2 = []
     for i in lst:
         sum += i
     mean = sum / len(lst)
     for i in lst:
-        if mean > i:
-            lst.append(i)
-    return lst
+        if mean >= i:
+            lst2.append(i)
+    return lst2
 
 
 #difference between 2 lowest numbers in the list //
@@ -59,7 +59,7 @@ def no_small_mean(lst):
         sum += i
     mean = sum / len(lst)
     for i in lst:
-        if mean > i:
+        if mean >= i:
             res += 1
     return res
 
@@ -73,10 +73,12 @@ def no_bus(n,d1):
 
 # odd one out //
 def odd_one(lst):
-    for i in range(len(lst)):
-        for j in lst:
-            if lst[i] != j:
-                return j
+    for i in range(1,len(lst)):
+        if lst[i] != lst[i-1]:
+            if lst[i] != lst[i+1]:
+                return lst[i]
+            else:
+                return lst[i-1]
 
 
 #Average speed of a vehicle (distance in km, time in minutes, speed is in kmph) //

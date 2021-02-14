@@ -1,24 +1,26 @@
 # reversing a number //
 def reverse_num(n):
-    res = 0
-    i = 0
-    k = n
-    while k > 0:
-        i += 1
-        k //= 10
-    while n > 0:
-        rem = n%10
-        n //= 10
-        i -= 1
-        res += rem*pow(10,i)
-    return res
-
+    if type(n) == int:
+        res = 0
+        i = 0
+        k = n
+        while k > 0:
+            i += 1
+            k //= 10
+        while n > 0:
+            rem = n%10
+            n //= 10
+            i -= 1
+            res += rem*pow(10,i)
+        return res
+    else:
+        return None
 
 # roots of quad equation //
 def root_quad(a,b,c):
     det = b**2 - 4*a*c
     if det == 0:
-        return -b/(2*a), -b/(2*a)
+        return round(-b/(2*a), 3), round(-b/(2*a), 3)
     else:
         return (-b+det**0.5)/(2*a), (-b-det**0.5)/(2*a)
 
@@ -43,7 +45,7 @@ def prime_all(a,b):
 
 #PRIME NOS //
 def isprime(n):
-    if n == 0 or n == 1:
+    if n <= 0 or n == 1:
         return False
         
     for i in range(2, n//2+1):
@@ -68,12 +70,14 @@ def leap_year(n):
 
 #factorial of a number //
 def fact(n):
-    res = 1
-    if n >= 1:
-        for i in range(1, n+1):
-            res *= i
-    return res
-
+    if type(n) == int and n >= 0:
+        res = 1
+        if n >= 1:
+            for i in range(1, n+1):
+                res *= i
+        return res
+    else:
+        return None
 
 #sum of the factors //
 def fact_sum(n):
@@ -86,8 +90,12 @@ def fact_sum(n):
 
 #Largest of numbers //
 def largest(lst1):
+    for i in lst1:
+        if type(i) != int:
+            return None
 
     large = lst1[0]
+
     for i in range(len(lst1)):
         if lst1[i] > large:
             large = lst1[i]
@@ -98,7 +106,7 @@ def largest(lst1):
 #Sum of Digits //
 def sum_of(lst1):
     n = 0
-    for i in range(lst1):
+    for i in lst1:
         n += i
     return n
 
@@ -176,27 +184,32 @@ def type_triangle(a,b,c):
 
 #quadrant of a point on plane //
 def quadrant(x,y):
+    if x == 0 or y == 0:
+        return None
+
     if x > 0:
         if y > 0:
             return 1
         else:
             return 4
-    else:
+    elif x < 0:
         if y > 0:
             return 2
         else:
             return 3
+    
 
 
 #trianglular sum of a nunber //
 def triang_num(n):
     res = 0
-    while n > 0:
-        i = 1
-        while i <= n:
-            res += i
-            i += 1
-        n -= 1
+    if n > 0:
+        while n > 0:
+            i = 1
+            while i <= n:
+                res += i
+                i += 1
+            n -= 1
     return res
     
 
@@ -210,15 +223,18 @@ def pascal(n):
 
 #digital root //
 def digi_root(n):
-    k = n
-    res = 0
-    while k > 0:
-        rem = k%10
-        k //= 10
-        res += rem
-    while res // 10 != 0:
-        res = digi_root(res)
-    return res
+    if n >= 0:
+        k = n
+        res = 0
+        while k > 0:
+            rem = k%10
+            k //= 10
+            res += rem
+        while res // 10 != 0:
+            res = digi_root(res)
+        return res
+    else:
+        return None
 
 
 #ncr //
