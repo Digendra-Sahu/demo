@@ -210,7 +210,6 @@ def digi_root(n):
 def ncr(n,r):
     return fact(n)/(fact(n-r)*fact(r))
 
-
 #fibonacci //
 def fibonacci(n):
     lst = []
@@ -243,7 +242,6 @@ def tribonacci(n):
         n -= 1
     return b
 
-
 #generate super prime nos 
 def super_prime(n):
     lst = prime_all(2, n)[0]
@@ -253,11 +251,6 @@ def super_prime(n):
             lst2.append(lst[i])
     return lst2
 
-print(super_prime(20))
-
-
-
-
 #maximum nos by deleting a single digit //
 def max_del_4(num):
     lst = []
@@ -266,7 +259,6 @@ def max_del_4(num):
         lst.append(int(k.replace(c, '')))
 
     return max(lst)
-
 
 #choice based arithmetic //
 def ch_arith(a,b,c):
@@ -303,4 +295,3 @@ def number_pyr(n):
             print(j, end=".")
         
         print("\n")
-

@@ -115,7 +115,7 @@ def rgb_to_hex(val):
     s = "0X"
     flag = 0
     for i in val:
-        while i>0:
+        while i>0 and i < 256:
             if i < 16 and flag == 0:
                 rem = i%16
                 if rem >= 10:
@@ -123,7 +123,7 @@ def rgb_to_hex(val):
                 else:
                     s+=  "0" + str(rem)
                 i //= 16
-            else:
+            elif i < 256:
                 flag = 1
                 rem = i%16
                 if rem >= 10:
@@ -131,6 +131,8 @@ def rgb_to_hex(val):
                 else:
                     s+= str(rem)
                 i //= 16
+            else:
+                return None
     return s
     
 #accumulated strings //
