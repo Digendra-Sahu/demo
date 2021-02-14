@@ -35,6 +35,7 @@ def ele_small_mean(lst):
             lst.append(i)
     return lst
 
+
 #difference between 2 lowest numbers in the list //
 def diff_lst(lst):
     small = lst[0]
@@ -49,6 +50,7 @@ def diff_lst(lst):
     
     return small2 - small
 
+
 #no of elements smaller than mean //
 def no_small_mean(lst):
     sum = 0
@@ -61,11 +63,13 @@ def no_small_mean(lst):
             res += 1
     return res
 
+
 # no of people in a bus //
 def no_bus(n,d1):
     for i in d1.values():
         n += i[0] - i[1]
     return n
+
 
 # odd one out //
 def odd_one(lst):
