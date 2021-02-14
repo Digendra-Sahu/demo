@@ -142,7 +142,7 @@ def accum_str(st):
         s += c.upper() + c.lower()*k
         s += "-"
         k +=1 
-    return s
+    return s[:-1]
 
 #mexican wave //
 def mexican(st):

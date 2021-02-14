@@ -85,7 +85,7 @@ def odd_one(lst):
 def avg_speed(lst, t): 
     k = len(lst)
     total = lst[0]
-    for i in range(len(lst)):
+    for i in range(len(lst)-1):
         total += lst[i+1] - lst[i]
-    return total/k * 60
+    return round(total/k * 60, 3)
 
