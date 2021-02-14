@@ -13,6 +13,7 @@ def reverse_num(n):
         res += rem*pow(10,i)
     return res
 
+
 # roots of quad equation //
 def root_quad(a,b,c):
     det = b**2 - 4*a*c
@@ -39,6 +40,7 @@ def prime_all(a,b):
             lst1.append(i)
     return lst1, len(lst1)
 
+
 #PRIME NOS //
 def isprime(n):
     if n == 0 or n == 1:
@@ -48,6 +50,7 @@ def isprime(n):
         if n%i == 0:
             return False
     return True
+
 
 #leap year //
 def leap_year(n):
@@ -62,6 +65,7 @@ def leap_year(n):
         else:
             return False
 
+
 #factorial of a number //
 def fact(n):
     res = 1
@@ -70,6 +74,7 @@ def fact(n):
             res *= i
     return res
 
+
 #sum of the factors //
 def fact_sum(n):
     res = 0
@@ -77,6 +82,7 @@ def fact_sum(n):
         if n % i == 0:
             res += i
     return res
+
 
 #Largest of numbers //
 def largest(lst1):
@@ -87,6 +93,7 @@ def largest(lst1):
             large = lst1[i]
     
     return large
+
 
 #Sum of Digits //
 def sum_of(lst1):
@@ -111,6 +118,7 @@ def armstrong_num(n):
         res += pow(rem, d)
 
     return res == n
+
 
 #LCM of 2 numbers //
 def lcm(a, b):
@@ -141,12 +149,14 @@ def hcf(a, b):
             smaller -= 1
     return smaller
 
+
 #vowel or consonant //
 def vow_cons(n):
-    if n == "a" or "e" or "i" or "o" or "u":
+    if n in ["a", "e", "i", "o", "u"]:
         return True
     else:
         return False
+
 
 #Triangle condition //
 def type_triangle(a,b,c):
@@ -163,6 +173,7 @@ def type_triangle(a,b,c):
     else:
         return 0
 
+
 #quadrant of a point on plane //
 def quadrant(x,y):
     if x > 0:
@@ -176,6 +187,7 @@ def quadrant(x,y):
         else:
             return 3
 
+
 #trianglular sum of a nunber //
 def triang_num(n):
     res = 0
@@ -187,12 +199,14 @@ def triang_num(n):
         n -= 1
     return res
     
+
 #pascal triangle //
 def pascal(n):
     for i in range(0, n):
         for j in range(0, i+1):
             print(int(ncr(i,j)), end=' ')
         print("\n")
+
 
 #digital root //
 def digi_root(n):
@@ -206,9 +220,11 @@ def digi_root(n):
         res = digi_root(res)
     return res
 
+
 #ncr //
 def ncr(n,r):
     return fact(n)/(fact(n-r)*fact(r))
+
 
 #fibonacci //
 def fibonacci(n):
@@ -222,6 +238,7 @@ def fibonacci(n):
         lst.append(a)
     return a, lst
 
+
 # using recursion
 def recur_fibo(n):
     if n == 1:
@@ -230,6 +247,7 @@ def recur_fibo(n):
         return 0
     elif n > 1:
         return recur_fibo(n-1) + recur_fibo(n-2)
+
 
 #tribonacci //
 def tribonacci(n):
@@ -242,6 +260,7 @@ def tribonacci(n):
         n -= 1
     return b
 
+
 #generate super prime nos 
 def super_prime(n):
     lst = prime_all(2, n)[0]
@@ -251,6 +270,7 @@ def super_prime(n):
             lst2.append(lst[i])
     return lst2
 
+
 #maximum nos by deleting a single digit //
 def max_del_4(num):
     lst = []
@@ -259,6 +279,7 @@ def max_del_4(num):
         lst.append(int(k.replace(c, '')))
 
     return max(lst)
+
 
 #choice based arithmetic //
 def ch_arith(a,b,c):
@@ -275,12 +296,14 @@ def ch_arith(a,b,c):
     else:
         return None
 
+
 #number triangle //
 def number_tri(n):
     for i in range(1,n+1):
         for j in range(1,i+1):
             print(j, end=" ")
         print("\n")
+
 
 #number pyramid //
 def number_pyr(n):
