@@ -8,7 +8,6 @@ def isogram(word):
             lst.append(i)
     return True
 
-
 #ip into integer //
 def iptoint(ip):
     s = ""
