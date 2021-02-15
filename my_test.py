@@ -3,7 +3,7 @@ from assign_2pyth import *
 from assign_3pyth import *
 import pytest
 
-def test_func():
+def _testfunc():
     assert reverse_num(3456) == 6543
     assert reverse_num(122310) == 13221
     assert reverse_num("439832") == None
@@ -157,8 +157,11 @@ def test34_func():
     assert isogram("python") == True
 
 def test35_func():
-    assert iptoint("192.168.1.251") == 1921681251
-    assert iptoint("117.211.19.112") == 11721119112
+    assert ip_to_int_vice("192.168.1.251") == 3232236027
+    assert ip_to_int_vice("117.211.19.12") == 1976767244
+    assert ip_to_int_vice("192.256.1.1") == None
+    assert ip_to_int_vice(1976767244) == "117.211.19.12"
+    
 
 def test36_func():
     assert word_frequency("a cat a bat and a rat") == {'a': 3, 'cat': 1, 'bat': 1, 'and': 1, 'rat': 1}

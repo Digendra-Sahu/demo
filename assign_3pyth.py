@@ -8,7 +8,7 @@ def isogram(word):
             lst.append(i)
     return True
 
-#ip into integer //
+#ip string literal into integer literal // (ignore this)
 def iptoint(ip):
     s = ""
     
@@ -29,6 +29,30 @@ def iptoint(ip):
          for i in lst:
              s += str(i) + "."
          return s[::-1]
+
+# ip address to integer
+
+def ip_to_int_vice(st):
+    if type(st) == str:
+        lst = st.split('.')
+        res, k = 0,3
+        for i in lst:
+            if int(i) <= 255:
+                res += pow(256, k) * int(i)
+                k -= 1
+            else:
+                return None
+            
+        return res
+    elif type(st) == int:
+        s = ""
+        k = 3
+        while k >=0:
+            s += str((st // pow(256, k))%256) + "."
+            k -= 1
+
+        return s[:-1]
+
 
 #frequency of message //
 def word_frequency(message):
