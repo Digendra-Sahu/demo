@@ -137,7 +137,16 @@ def rgb_to_hex(val):
                 i //= 16
             
     return s
-    
+
+#RGB_TO_HEX using inbuilt function
+def rgb_to_hex_inbuilt(val):
+    s = "0X"
+    for i in val:
+        if i < 16:
+            s += "0"
+        s += hex(i)[2:]
+    return s
+
 #accumulated strings //
 def accum_str(st):
     s = ""

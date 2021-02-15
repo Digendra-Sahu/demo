@@ -181,6 +181,8 @@ def test40_func():
     assert rgb_to_hex((112,211,299)) == None
     assert rgb_to_hex((255,0,255)) == "0XFF00FF"
     assert rgb_to_hex((90,11,199)) == "0XA5B7C"    
+    assert rgb_to_hex_inbuilt((0,0,112)) == "0X000070"
+    
 
 def test41_func():
     assert accum_str("abcd") == "A-Bb-Ccc-Dddd"
