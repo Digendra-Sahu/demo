@@ -148,8 +148,8 @@ def test32_func():
     assert odd_one([3,1,1,1,1]) == 3
 
 def test33_func():
-    assert avg_speed([1, 2, 1.1, 1.6, 0.9], 6) == 10.8
-    assert avg_speed([0.1, 0.9, 2.1, 3.2, 0.9, 1.1], 4) == 11.0
+    assert avg_speed([1, 2, 3, 4, 5], 5) == 12.0
+    assert avg_speed([0.1, 0.9, 2.1, 3.2, 0.9, 1.1], 4) == 2.75
 
 def test34_func():
     assert isogram("mithun") == True

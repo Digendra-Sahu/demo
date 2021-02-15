@@ -87,5 +87,5 @@ def avg_speed(lst, t):
     total = lst[0]
     for i in range(len(lst)-1):
         total += lst[i+1] - lst[i]
-    return round(total/k * 60, 3)
+    return round(total/(k*t) * 60, 3)
 
