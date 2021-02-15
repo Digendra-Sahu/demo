@@ -75,7 +75,7 @@ def malf_time(tim_str):
     
     for i in lst2:
         s += str(i) + ":"
-    return s
+    return s[:-1]
 
 
 #malformed date string //
@@ -90,13 +90,13 @@ def mal_date(date_str):
     if lst2[1] > 12:
         lst2[2] += lst2[1] // 12
         lst2[1] %= 12
-    if (lst2[0] > 30 and lst2[1] in [4,6,9,11]) or (lst2[0] > 31 and lst2[1] in [1,3,5,7,8,10,12]) or (lst2[1] > 28 and lst2[1] == 2):
+    if (lst2[0] > 30 and lst2[1] in [4,6,9,11]) or (lst2[0] > 31 and lst2[1] in [1,3,5,7,8,10,12]) or (lst2[0] > 28 and lst2[1] == 2):
         lst2[1] += lst2[0] // 30
         lst2[0] %= 30
 
     for i in lst2:
         s += str(i) + "/"
-    return s
+    return s[:-1]
 
     
 #largest number by deleting the single digit //
@@ -114,6 +114,11 @@ def rgb_to_hex(val):
     s = "0X"
     flag = 0
     for i in val:
+        if i > 255:
+            return None
+        elif i == 0:
+            s += "00"
+
         while i>0 and i < 256:
             if i < 16 and flag == 0:
                 rem = i%16
@@ -130,8 +135,7 @@ def rgb_to_hex(val):
                 else:
                     s+= str(rem)
                 i //= 16
-            else:
-                return None
+            
     return s
     
 #accumulated strings //

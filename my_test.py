@@ -158,23 +158,29 @@ def test34_func():
 
 def test35_func():
     assert iptoint("192.168.1.251") == 1921681251
-    assert iptoint(192112134251) == "192.112.134.251."
+    assert iptoint("117.211.19.112") == 11721119112
 
 def test36_func():
     assert word_frequency("a cat a bat and a rat") == {'a': 3, 'cat': 1, 'bat': 1, 'and': 1, 'rat': 1}
     assert word_frequency("can i come in i am tired ?") == {'can': 1, 'i': 2, 'come': 1, 'in': 1, 'am': 1, 'tired': 1, '?': 1}
 
 def test37_func():
-    assert lar_shuff
+    assert lar_shuff(297231) == 973221
+    assert lar_shuff(8179115) == 9875111
 
 def test38_func():
-    assert malf_time
+    assert malf_time("12:09:45") == "12:9:45"
+    assert malf_time("09:88:90") == "10:29:30"
 
 def test39_func():
-    assert mal_date
+    assert mal_date("33/11/2011") == "3/12/2011"
+    assert mal_date("29/2/2012") == "29/2/2012"
+    assert mal_date("11/15/2018") == "11/3/2019"
 
 def test40_func():
-    assert rgb_to_hex
+    assert rgb_to_hex((112,211,299)) == None
+    assert rgb_to_hex((255,0,255)) == "0XFF00FF"
+    assert rgb_to_hex((90,11,199)) == "0XA5B7C"    
 
 def test41_func():
     assert accum_str("abcd") == "A-Bb-Ccc-Dddd"
